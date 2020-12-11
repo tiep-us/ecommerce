@@ -5,16 +5,16 @@
   },
   "links_1": {
     "list_pages": true,
-    "title": "Páginas",
+    "title": "Shop Quần áo",
     "list": []
   },
   "links_2": {
     "list_categories": true,
-    "title": "Categorias",
+    "title": "Danh mục sản phẩm",
     "list": []
   },
   "contacts": {
-    "title": "Contatos",
+    "title": "Liên hệ",
     "phone_wpp": true,
     "socials": true,
     "email": true,
