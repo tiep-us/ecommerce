@@ -6,12 +6,12 @@
   "contacts_stripe": {
     "pages": [
       {
-        "title": "Sobre nós",
-        "link": "/pages/sobre-nos"
+        "title": "hi@chinh.com",
+        "link": "mailto:hi@chinh.com"
       },
       {
-        "title": "Esta loja é um PWA",
-        "link": "/posts/esta-loja-e-um-pwa"
+        "title": "Tiep Developer",
+        "link": "/posts/"
       }
     ],
     "phone_wpp": true,
