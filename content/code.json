@@ -1,5 +1,5 @@
 {
-  "css": "@decimal-format .prices__value {\n  grouping-separator: \",\";\n  decimal-separator : \".\"\n}",
+  "css": "@decimal-format .prices__value {\n  grouping-separator: \",\";\n  decimal-separator : \".\"\n}\n\n.top-bar__nav {\n    max-width: 80rem;\n    color: #ffffff;\n    margin-left: auto;\n    background-color: #000000;\n    margin-right: auto;\n    padding: var(--spacer-2) var(--spacer-2) var(--spacer-1);\n}",
   "html_head": "",
   "html_body": ""
 }
