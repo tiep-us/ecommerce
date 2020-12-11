@@ -1,7 +1,7 @@
 {
   "store_id": 1199,
   "domain": "tiepecommerce.netlify.app",
-  "currency_symbol": "đ",
+  "currency_symbol": "₫",
   "primary_color": "#000",
   "theme": {
     "bootswatch": "_",
