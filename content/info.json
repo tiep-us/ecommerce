@@ -1,18 +1,18 @@
 {
   "shipping": {
     "show": true,
-    "text": "Entregamos para todo o Brasil"
+    "text": "Miễn phí vận chuyển"
   },
   "installments": {
     "show": true,
-    "text": "Parcele sem juros"
+    "text": "Thanh toán COD"
   },
   "exchange": {
     "show": true,
-    "text": "Não gostou? A primeira troca é gratuita"
+    "text": "Đổi trả miễn phí lần đầu"
   },
   "promo": {
     "show": true,
-    "text": "Diferentes promoções ao longo do ano!"
+    "text": "Khuyến mãi quanh năm"
   }
 }
