@@ -1,5 +1,5 @@
 {
-  "css": "",
+  "css": "@decimal-format price {\n  grouping-separator: \",\";\n  decimal-separator : \".\"\n}",
   "html_head": "",
   "html_body": ""
 }
