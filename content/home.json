@@ -1,16 +1,17 @@
 {
-  "meta_title": "",
-  "meta_description": "",
+  "meta_title": "Shop quần áo Việt nam xuất khẩu chính hãng",
+  "meta_description": "Sản phẩm chất lượng, hàng Việt nam xuất khẩu, hỗ trợ freeship toàn quốc.",
   "sections": [
     {
       "type": "banner-slider",
       "autoplay": 9000,
       "slides": [
         {
-          "start": "2020-12-11T19:35:13.536Z",
-          "end": "2020-12-11T19:35:13.577Z",
-          "img": "/img/uploads/cover01.jpg",
-          "alt": "Shop quần áo Việt nam xuất khẩu chính hãng, đầm cho chị em"
+          "start": "2020-12-12T11:15:25.839Z",
+          "end": "2030-12-30T19:35:13.577Z",
+          "img": "/img/uploads/slider_girl_on_tour.png",
+          "alt": "Shop quần áo Việt nam xuất khẩu chính hãng, đầm cho chị em",
+          "link": ""
         },
         {
           "img": "/img/uploads/rect89.webp",
@@ -40,8 +41,8 @@
     },
     {
       "type": "page-title",
-      "title": "Loja demo da E-Com Plus",
-      "description": "Loja de demonstração e testes da plataforma E-Com Plus e Storefront. Todos os produtos, preços e informações são meramente ilustrativos."
+      "title": "Giá trị, Chất lượng, Đảm bảo.",
+      "description": "Mang lại các giá trị thiết thực nhất cho bạn, và những người thân yêu."
     }
   ]
 }
