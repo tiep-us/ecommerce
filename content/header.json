@@ -1,13 +1,13 @@
 {
   "marketing_stripe": {
-    "text": "Tận dụng ưu đãi giảm giá 25%!",
-    "link": "/promotion"
+    "text": "Miễn phí vận chuyển toàn quốc",
+    "link": "/"
   },
   "contacts_stripe": {
     "pages": [
       {
-        "title": "hi@chinh.com",
-        "link": "mailto:hi@chinh.com"
+        "title": "hi@hoaba.com",
+        "link": "mailto:hi@hoaba.com"
       },
       {
         "title": "Shop quần áo thời trang nam và nữ, và cho bé",
