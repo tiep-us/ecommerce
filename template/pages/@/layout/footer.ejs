@@ -112,7 +112,7 @@ const networksWithColors = [
                 <% const { title } = _.cms(`pages/${slug}`) %>
                 <li>
                   <i class="fas fa-angle-right"></i>
-                  <a href="/pages/<%= slug %>">
+                  <a class="footer__links multicolor" href="/pages/<%= slug %>">
                     <%= title %>
                   </a>
                 </li>
@@ -123,7 +123,7 @@ const networksWithColors = [
               <% footer.links_1.list.forEach(({ url, text }) => { %>
                 <li>
                   <i class="fas fa-angle-right"></i>
-                  <a href="<%= url %>">
+                  <a class="footer__links multicolor" href="<%= url %>">
                     <%= text %>
                   </a>
                 </li>
@@ -151,7 +151,7 @@ const networksWithColors = [
                 <% if (!parent) { %>
                   <li>
                     <i class="fas fa-angle-right"></i>
-                    <a href="/<%= slug %>">
+                    <a class="footer__links multicolor" href="/<%= slug %>">
                       <%= name %>
                     </a>
                   </li>
@@ -163,7 +163,7 @@ const networksWithColors = [
               <% footer.links_2.list.forEach(({ url, text }) => { %>
                 <li>
                   <i class="fas fa-angle-right"></i>
-                  <a href="<%= url %>">
+                  <a class="footer__links multicolor" href="<%= url %>">
                     <%= text %>
                   </a>
                 </li>
@@ -211,11 +211,10 @@ const networksWithColors = [
 </footer>
 
 <div class="ecom-credits">
-  <a href="https://e-com.plus" target="_blank" rel="noopener">
-    Powered by
-    <img
-      src="https://ecom.nyc3.digitaloceanspaces.com/brand/plus/198x43.png"
-      alt="E-com Plus"
+    Sử dụng nền tảng e-com.plus. Phát triển bởi
+    <a href="https://e-com.plus" target="_blank" rel="noopener"><img
+      src="https://tiepecommerce.netlify.app/img/uploads/tiep_dev.png"
+      alt="Phạm Xuân Tiếp the Developer"
     >
   </a>
 </div>
