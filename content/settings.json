@@ -9,7 +9,7 @@
   "bg_color": "#ffffff",
   "logo": "/img/uploads/new_convidence_logo.png",
   "name": "Tiếp Rùa pa Ecommerce",
-  "short_name": "My Shop",
+  "short_name": "Shop quần áo thời trang nam và nữ, và cho bé",
   "lang": "en_us",
   "currency": "VND",
   "mini_logo": "",
@@ -18,6 +18,6 @@
   "secondary_color": "#393e46",
   "icon": "/img/uploads/new_convidence_logo.png",
   "store_id": 1199,
-  "description": "My PWA Shop",
+  "description": "Hàng Việt Nam Xuất Khẩu chất lượng cao, giá cả tốt, phù hợp cho mọi gia đình.",
   "large_icon": "/img/uploads/new_convidence_logo.png"
 }
