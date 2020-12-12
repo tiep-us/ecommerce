@@ -1,23 +1,23 @@
 {
-  "store_id": 1199,
   "domain": "tiepecommerce.netlify.app",
-  "currency_symbol": "đ",
+  "currency_symbol": "₫",
   "primary_color": "#000",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
   "bg_color": "#ffffff",
-  "logo": "/img/uploads/whiteruapa.png",
+  "logo": "/img/uploads/new_convidence_logo.png",
   "name": "Tiếp Rùa pa Ecommerce",
   "short_name": "My Shop",
   "lang": "en_us",
-  "currency": "VNĐ",
+  "currency": "VND",
   "mini_logo": "",
-  "favicon": "/img/uploads/favicon.png",
+  "favicon": "/img/uploads/new_convidence_logo.png",
   "country_code": "US",
   "secondary_color": "#393e46",
-  "icon": "/img/icon.png",
+  "icon": "/img/uploads/new_convidence_logo.png",
+  "store_id": 1199,
   "description": "My PWA Shop",
-  "large_icon": "/img/large-icon.png"
+  "large_icon": "/img/uploads/new_convidence_logo.png"
 }
