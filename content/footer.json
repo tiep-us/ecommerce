@@ -29,15 +29,16 @@
   "payment_methods": {
     "bb": true,
     "visa": true,
-    "boleto": true,
+    "boleto": false,
     "aura": false,
     "banrisul": false,
-    "elo": true,
+    "elo": false,
     "hipercard": false,
     "hsbc": false,
     "bradesco": true,
     "santander": false,
     "mastercard": true,
+    "paypal": true,
     "citibank": false,
     "mais": false,
     "itau": true
