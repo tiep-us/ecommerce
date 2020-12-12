@@ -1,18 +1,18 @@
 {
   "shipping": {
-    "show": true,
+    "show": false,
     "text": "Miễn phí vận chuyển"
   },
   "installments": {
-    "show": true,
+    "show": false,
     "text": "Thanh toán COD"
   },
   "exchange": {
-    "show": true,
+    "show": false,
     "text": "Đổi trả miễn phí lần đầu"
   },
   "promo": {
-    "show": true,
+    "show": false,
     "text": "Khuyến mãi quanh năm"
   }
 }
