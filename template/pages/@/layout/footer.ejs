@@ -95,16 +95,18 @@ const networksWithColors = [
       </div>
 
       <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-pages"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-pages"
-        >
-          <%= footer.links_1.title || _.dictionary('pages') %>
-        </a>
+        <div id="footer-categories">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=2841653302786576&autoLogAppEvents=1" nonce="wXvksb8a"></script>
+          <div class="fb-page" data-href="https://www.facebook.com/ruapahub/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ruapahub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ruapahub/">Rùa pa</a></blockquote></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-5 order-lg-first">
+        <h2 class="footer__title footer__store">
+          <%= footer.description.title || _.settings.name %>
+        </h2>
+
         <div class="collapse" id="footer-pages">
           <% if (footer.links_1.list_pages) { %>
             <ul class="footer__links">
@@ -131,20 +133,7 @@ const networksWithColors = [
             </ul>
           <% } %>
         </div>
-      </div>
 
-      <div class="col-12 col-sm-6 col-lg">
-        <div id="footer-categories">
-          <div id="fb-root"></div>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=2841653302786576&autoLogAppEvents=1" nonce="wXvksb8a"></script>
-          <div class="fb-page" data-href="https://www.facebook.com/ruapahub/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ruapahub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ruapahub/">Rùa pa</a></blockquote></div>
-        </div>
-      </div>
-
-      <div class="col-12 col-xl-5 order-lg-first">
-        <h2 class="footer__title footer__store">
-          <%= footer.description.title || _.settings.name %>
-        </h2>
         <p><%- footer.description.text || _.settings.description %></p>
 
         <div class="mt-4 mb-3">
