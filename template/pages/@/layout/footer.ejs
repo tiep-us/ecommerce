@@ -17,7 +17,7 @@ const networksWithColors = [
 <footer class="footer py-3 py-lg-4 py-xl-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-auto order-lg-last">
+      <div class="col-12 col-sm-4 order-lg-last">
         <div id="footer-categories">
           <div id="fb-root"></div>
           <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=2841653302786576&autoLogAppEvents=1" nonce="wXvksb8a"></script>
@@ -25,7 +25,7 @@ const networksWithColors = [
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-lg">
+      <div class="col-12 col-sm-4 order-lg">
           <div class="footer__contacts">
             <% if (footer.contacts.title) { %>
               <div class="footer__title">
@@ -102,7 +102,7 @@ const networksWithColors = [
         </div>
       </div>
 
-      <div class="col-12 col-xl-5 order-lg-first">
+      <div class="col-12 col-sm-4 order-lg-first">
         <h2 class="footer__title footer__store">
           <%= footer.description.title || _.settings.name %>
         </h2>
