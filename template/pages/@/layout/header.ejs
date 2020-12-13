@@ -83,20 +83,6 @@ if (header.categories_list) {
             <% } %>
           </nav>
           <% if (header.contacts_stripe.phone_wpp) { %>
-            <% if (contacts.whatsapp) { %>
-              <!--
-              <a
-                href="javascript:;"
-                target="_blank"
-                rel="noopener"
-                class="whatsapp-link"
-                data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
-              >
-                <i class="fab fa-whatsapp"></i>
-                <%= contacts.whatsapp %>
-              </a>
-              -->
-            <% } %>
             <% if (contacts.phone) { %>
               <a
                 href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
@@ -106,6 +92,19 @@ if (header.categories_list) {
                 <!-- <i class="fas fa-phone"></i> -->
                 <%= contacts.phone %>
               </a>
+            <% } %>
+            <% if (contacts.whatsapp) { %>
+              
+              <a
+                href="https://facebook.com/ruapahub"
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-link"
+                data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
+              >
+              <img src="/img/uploads/dev_logo.png" alt="Tiếp Dev" text="Tiếp Dev" style="width: 100px">
+              </a>
+              
             <% } %>
           <% } %>
         </div>
