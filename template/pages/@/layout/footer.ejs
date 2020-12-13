@@ -107,7 +107,7 @@ const networksWithColors = [
           <%= footer.description.title || _.settings.name %>
         </h2>
 
-        <div class="collapse" id="footer-pages">
+        <div class="collapse show" id="footer-pages">
           <% if (footer.links_1.list_pages) { %>
             <ul class="footer__links">
               <% (_.cms('pages') || []).forEach(slug => { %>
