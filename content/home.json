@@ -49,6 +49,21 @@
       ]
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/male_fashion_banner_2.png",
+          "alt": "Dành cho nam giới",
+          "link": "/nam"
+        },
+        {
+          "img": "/img/uploads/children_under_16.png",
+          "alt": "Shop quần áo dành cho bé",
+          "link": "/treem"
+        }
+      ]
+    },
+    {
       "type": "info-bar",
       "enabled": true
     },
