@@ -134,42 +134,10 @@ const networksWithColors = [
       </div>
 
       <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-categories"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-categories"
-        >
-          <%= footer.links_2.title || _.dictionary('categories') %>
-        </a>
-        <div class="collapse" id="footer-categories">
-          <% if (footer.links_2.list_categories) { %>
-            <ul class="footer__links">
-              <% _.categories.forEach(({ name, slug, parent }) => { %>
-                <% if (!parent) { %>
-                  <li>
-                    <i class="fas fa-angle-right"></i>
-                    <a class="footer__links multicolor" href="/<%= slug %>">
-                      <%= name %>
-                    </a>
-                  </li>
-                <% } %>
-              <% }) %>
-            </ul>
-          <% } else { %>
-            <ul class="footer__links">
-              <% footer.links_2.list.forEach(({ url, text }) => { %>
-                <li>
-                  <i class="fas fa-angle-right"></i>
-                  <a class="footer__links multicolor" href="<%= url %>">
-                    <%= text %>
-                  </a>
-                </li>
-              <% }) %>
-            </ul>
-          <% } %>
+        <div id="footer-categories">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=2841653302786576&autoLogAppEvents=1" nonce="wXvksb8a"></script>
+          <div class="fb-page" data-href="https://www.facebook.com/ruapahub/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ruapahub/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ruapahub/">Rùa pa</a></blockquote></div>
         </div>
       </div>
 
