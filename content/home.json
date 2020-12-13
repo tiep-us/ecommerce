@@ -29,10 +29,19 @@
       ]
     },
     {
-      "type": "responsive-banner",
-      "img": "/img/uploads/male_fashion_banner_1.png",
-      "link": "/nam",
-      "alt": "thời trang Dành cho nam giới"
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/male_fashion_banner_1.png",
+          "alt": "Dành cho nam giới",
+          "link": "/nam"
+        },
+        {
+          "img": "/img/uploads/female_banner_12.png",
+          "link": "/nu",
+          "alt": "Dành cho bạn nữ"
+        }
+      ]
     },
     {
       "type": "info-bar",
