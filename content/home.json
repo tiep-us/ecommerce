@@ -40,6 +40,11 @@
           "img": "/img/uploads/female_banner_12.png",
           "link": "/nu",
           "alt": "Dành cho bạn nữ"
+        },
+        {
+          "img": "/img/uploads/children_under_16.png",
+          "alt": "Shop quần áo dành cho bé",
+          "link": "/treem"
         }
       ]
     },
