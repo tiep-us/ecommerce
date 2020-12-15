@@ -1,0 +1,250 @@
+<div class="checkout">
+  <transition-group
+    enter-active-class="animated fadeIn"
+    leave-active-class="d-none"
+  >
+    <div
+      v-if="shownCheckoutStep"
+      :key="`app${checkoutAppId}`"
+      class="checkout__app"
+    >
+      <div class="row">
+        <div class="col-lg-8">
+          <nav class="checkout__steps">
+            <a
+              :href="cartUrl"
+              class="checkout__step"
+              :title="i18n('BackToCart')"
+            >
+              <i class="fas fa-arrow-left"></i>
+              <span class="d-none d-md-inline">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </a>
+            <a
+              href="#"
+              class="checkout__step"
+              v-for="(label, i) in [null, 'Delivery', 'Payment']"
+              v-if="label"
+              :class="'checkout__step--' + (
+                shownCheckoutStep === i ? 'current'
+                  : enabledCheckoutStep < i ? 'disabled'
+                    : shownCheckoutStep > i ? 'past' : 'next'
+              )"
+              @click.prevent="toCheckoutStep = i"
+            >
+              <small>{{ i }}</small>
+              {{ i18n(label) }}
+            </a>
+          </nav>
+
+          <div class="row">
+            <div
+              class="checkout__col col-md-6"
+              :class="enabledCheckoutStep === 1 ? 'offset-lg-3' : null"
+            >
+              <div :class="shownCheckoutStep !== 1 ? 'd-none d-md-block' : null">
+                <div
+                  v-if="shippingAddress"
+                  class="checkout__shipping"
+                >
+                  <transition-group enter-active-class="animated fadeInDown">
+                    <div
+                      v-if="shippingService && !editShippingService"
+                      key="shipping"
+                    >
+                      <div class="checkout__shipping-method">
+                        <small>{{ shippingService.label }}</small>
+                        <shipping-line :shipping-line="shippingService.shipping_line"/>
+                      </div>
+
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-secondary"
+                        @click.prevent="editShippingService = true"
+                      >
+                        <i class="fas fa-edit mr-1"></i>
+                        {{ i18n('ChangeShippingMethod') }}
+                      </a>
+                    </div>
+
+                    <shipping-calculator
+                      v-else
+                      :key="`shipTo${localZipCode}`"
+                      :can-select-services="true"
+                      :shipped-items="cart.items"
+                      :zip-code="localZipCode"
+                      :can-input-zip="false"
+                      @select-service="service => $emit('update:shippingService', service)"
+                    />
+                  </transition-group>
+                </div>
+
+                <account-addresses
+                  :customer.sync="localCustomer"
+                  :zipCode="shippingZipCode"
+                  @select-address="selectAddress"
+                />
+
+                <transition
+                  enter-active-class="animated fadeInDown"
+                  leave-active-class="animated fadeOutUp"
+                >
+                  <button
+                    v-if="shownCheckoutStep === 1 && enabledCheckoutStep >= 2 && shippingService"
+                    class="checkout__btn-proceed btn btn-success mt-4"
+                    @click="toCheckoutStep = 2"
+                  >
+                    <i class="fas fa-chevron-right mr-1"></i>
+                    {{ i18n('ProceedToPayment') }}
+                  </button>
+                </transition>
+
+                <div
+                  class="checkout__overlay fade"
+                  :class="shownCheckoutStep !== 1 ? 'show' : null"
+                  @click="toCheckoutStep = 1"
+                >
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout__col col-md-6">
+              <transition
+                enter-active-class="animated fadeInRight slow"
+                leave-active-class="animated fadeOutRight fast position-absolute"
+              >
+                <div
+                  v-if="enabledCheckoutStep >= 2"
+                  :class="shownCheckoutStep !== 2 ? 'd-none d-md-block' : null"
+                >
+                  <payment-methods
+                    :key="paymentsListKey"
+                    :amount="amount"
+                    :customer="localCustomer"
+                    @select-gateway="selectPaymentGateway"
+                    @checkout="transaction => $emit('checkout', transaction)"
+                  />
+
+                  <div
+                    class="checkout__overlay fade"
+                    :class="shownCheckoutStep !== 2 ? 'show' : null"
+                    @click="toCheckoutStep = 2"
+                  >
+                  </div>
+                </div>
+              </transition>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 checkout__info">
+          <div class="checkout__summary">
+            <ec-summary
+              :amount="amount"
+              :items="cart.items"
+              :buyer="customer"
+              :shippingAddress="shippingAddress"
+              :can-show-price-options="!(paymentGateway && paymentGateway.app_id)"
+              @click:account="editAccount = true"
+            >
+              <template #more-offers>
+                <transition enter-active-class="animated fadeInDown">
+                  <button
+                    v-if="hasMoreOffers"
+                    class="checkout__btn-offers btn btn-sm btn-link"
+                    @click="goToOffers"
+                  >
+                    <i class="fas fa-plus mr-1"></i>
+                    {{ i19selectedOffers }}
+                  </button>
+                </transition>
+              </template>
+
+              <discount-applier
+                v-if="enabledCheckoutStep > 1"
+                class="checkout__discount"
+                :amount="amount"
+                :coupon-code.sync="localDiscountCoupon"
+                @set-discount-rule="discountRule => $emit('setDiscountRule', discountRule)"
+                :modules-payload="modulesPayload"
+                is-attention-wanted
+              />
+            </ec-summary>
+
+            <div class="checkout__notes mt-4 mb-auto">
+              <div class="form-group">
+                <label for="order-notes">{{ i19additionalComments }}</label>
+                <textarea
+                  class="form-control"
+                  :placeholder="i19orderNotesInputMsg"
+                  id="order-notes"
+                  rows="3"
+                  v-model="localNotes"
+                  maxlength="255"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="checkout__back">
+              <a :href="cartUrl" class="btn btn-sm btn-light">
+                <i class="fas fa-chevron-left mr-1"></i>
+                {{ i18n('BackToCart') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <recommended-items
+        ref="offers"
+        class="mt-5 pt-lg-3 mx-xl-3"
+        sort-order="offers"
+        :can-load-more="false"
+        row-class-name="row mt-4"
+        :product-card-props="{ buyText: i19addToCart }"
+        @recommend-items="hasMoreOffers = true"
+      >
+        <template #title>
+          <h3>
+            {{ i19buyAlsoMsg }}
+            <small class="d-block text-muted">
+              {{ i19selectedOffers }}
+            </small>
+          </h3>
+        </template>
+      </recommended-items>
+
+      <button
+        class="checkout__btn-top btn btn-link"
+        @click="goToTop"
+      >
+        <i class="fas fa-chevron-up mr-1"></i>
+        {{ i19checkout }}
+      </button>
+    </div>
+
+    <div key="login" v-else-if="!isUserIdentified">
+      <slot name="login">
+        <login-block
+          @login="login"
+          @update="isUserIdentified = true"
+          :customer-email.sync="customerEmail"
+        />
+      </slot>
+    </div>
+
+    <div key="account" class="checkout__account" v-else>
+      <slot name="account">
+        <p class="lead">
+          {{ i18n('RegisterToBuy') }}:
+        </p>
+
+        <account-form
+          :customer.sync="localCustomer"
+          :is-short="true"
+        />
+      </slot>
+    </div>
+  </transition-group>
+</div>
