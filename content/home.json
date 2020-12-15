@@ -16,6 +16,7 @@
         },
         {
           "img": "/img/uploads/slide_family_moremember.png",
+          "mobile_img": "/img/uploads/tonvinh_gaidep.png",
           "link": "/",
           "alt": "Nhiều thành viên hơn, nhưng mãi mãi là một gia đình.",
           "start": "2020-04-11T05:54:06.750Z",
@@ -23,6 +24,7 @@
         },
         {
           "img": "/img/uploads/slider_travel_girl.png",
+          "mobile_img": "/img/uploads/girl_group.png",
           "alt": "Tự tin đi đến bất kì nơi đâu",
           "start": "2020-12-12T11:38:31.135Z",
           "end": "2030-11-28T11:38:31.791Z"
