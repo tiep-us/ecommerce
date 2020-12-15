@@ -74,7 +74,7 @@
                       :can-select-services="true"
                       :shipped-items="cart.items"
                       :zip-code="localZipCode"
-                      :can-input-zip="false"
+                      :can-input-zip="true"
                       @select-service="service => $emit('update:shippingService', service)"
                     />
                   </transition-group>
