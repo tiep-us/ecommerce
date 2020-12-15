@@ -113,7 +113,7 @@ const networksWithColors = [
               <% (_.cms('pages') || []).forEach(slug => { %>
                 <% const { title } = _.cms(`pages/${slug}`) %>
                 <li>
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fas fa-angle-right" style="padding-right:10px;"></i>
                   <a class="footer__links multicolor" href="/pages/<%= slug %>">
                     <%= title %>
                   </a>
@@ -124,7 +124,7 @@ const networksWithColors = [
             <ul class="footer__links">
               <% footer.links_1.list.forEach(({ url, text }) => { %>
                 <li>
-                  <i class="fas fa-angle-right"></i>
+                  <i class="fas fa-angle-right" style="padding-right:10px;"></i>
                   <a class="footer__links multicolor" href="<%= url %>">
                     <%= text %>
                   </a>
