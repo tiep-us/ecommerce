@@ -26,14 +26,11 @@
         :aria-label="i19zipCode"
         required
       />
-  <div class="">
-    Tự động lấy vị trí <button type="button" onclick="TuDongDienZip()">Tự động điền</button>
-  </div>
-  <script>
-    function TuDongDienZip() {
-      document.getElementById("address-form-zip").defaultValue = "10000-000";
-    }
-    </script>   
+      <script>
+        document.addEventListener('DOMContentLoaded', function(event) { 
+            document.getElementById('address-form-zip').value = '10000-000';
+        });
+    </script> 
 
       <div
         v-if="zipLoading || zipInfoLink"
