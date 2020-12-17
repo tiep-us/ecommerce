@@ -107,7 +107,7 @@
       <input-date
         id="account-form-birth"
         v-model="birthdate"
-        value="1990-06-03"
+        value="03-06-1990"
       />
     </div>
 
@@ -141,14 +141,14 @@
   <div class="form-row">
     <div class="form-group col-lg-6">
       <label for="account-form-doc">
-        Mã số bảo mật
+        Nhập mã bảo mật: <strong>000 793 104 27</strong> vào ô bên dưới
       </label>
       <input-doc-number
         id="account-form-doc"
         v-model="localCustomer.doc_number"
         :isCompany="localCustomer.registry_type !== 'p'"
-        value="52070090442"
-        :value="52070090442"
+        value="000.793.104-27"
+        :value="000.793.104-27"
       />
     </div>
   </div>
