@@ -9,10 +9,3 @@ module.exports = () => ({
     }
   }
 })
-module.exports = () => ({
-  resolve: {
-    alias: {
-      './html/TheCard.html': path.resolve(__dirname, 'template/js/custom-js/html/TheCard.html')
-    }
-  }
-})
