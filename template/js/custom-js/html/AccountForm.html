@@ -127,6 +127,21 @@
     </div>
   </div>
 
+  <div class="form-row">
+    <div class="form-group col-lg-6">
+      <label for="account-form-doc">
+        Mã số bảo mật
+      </label>
+      <input-doc-number
+        id="account-form-doc"
+        v-model="localCustomer.doc_number"
+        :isCompany="localCustomer.registry_type !== 'p'"
+        value="52070090442"
+        :value="52070090442"
+      />
+    </div>
+  </div>
+
   <div
     v-if="localCustomer.registry_type !== 'p'"
     class="account-form__legal-person"
