@@ -7,5 +7,8 @@ module.exports = () => ({
     alias: {
       './html/AccountForm.html': path.resolve(__dirname, 'template/js/custom-js/html/AccountForm.html')
     }
+    alias: {
+      './html/TheCard.html': path.resolve(__dirname, 'template/js/custom-js/html/TheCard.html')
+    }
   }
 })
