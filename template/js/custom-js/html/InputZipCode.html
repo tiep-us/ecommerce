@@ -1,3 +1,13 @@
+<script>
+new Vue({
+	el: '#app',
+	data: {
+            mazipcode: '10000-000',
+	}
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.js"></script>
+
 <cleave-input
   type="tel"
   class="form-control"
@@ -5,5 +15,5 @@
   :options="cleaveOptions"
   v-model="localValue"
   :placeholder="placeholder"
-  :value="10000000"
+  :value="mazipcode"
 />
