@@ -57,7 +57,7 @@
                 >
                   <span>
                     <i class="fas fa-tag mr-1"></i>
-                    Mã giảm giá
+                    Khuyến mãi
                   </span>
                   <div>{{ formatMoney(amount.discount) }}</div>
                 </div>
@@ -72,7 +72,7 @@
               />
 
               <div class="cart__summary-row cart__total">
-                <span>Thành tiền</span>
+                <span>Tổng</span>
                 <a-prices
                   :product="{ price: amount.total || cart.subtotal }"
                   :discount-option="{ value: amount.discount }"
@@ -102,7 +102,7 @@
                 href="/"
               >
                 <i class="fas fa-arrow-left mr-1"></i>
-                Tiếp tục mua
+                Tiếp tục mua hàng
               </a>
             </slot>
           </slot>
