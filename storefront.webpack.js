@@ -16,6 +16,7 @@ module.exports = () => ({
       './html/InputPhone.html': path.resolve(__dirname, 'template/js/custom-js/html/InputPhone.html'),
       './html/InputZipCode.html': path.resolve(__dirname, 'template/js/custom-js/html/InputZipCode.html'),
       './html/ShippingCalculator.html': path.resolve(__dirname, 'template/js/custom-js/html/ShippingCalculator.html'),
+      './html/LoginBlock.html': path.resolve(__dirname, 'template/js/custom-js/html/LoginBlock.html'),
       './html/AddressForm.html': path.resolve(__dirname, 'template/js/custom-js/html/AddressForm.html')
     }
   }
