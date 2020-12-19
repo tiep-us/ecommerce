@@ -9,20 +9,20 @@
       "enabled": true
     },
     {
-      "type": "related-products",
-      "title": "Sản phẩm có liên quan"
-    },
-    {
-      "type": "recommended-products",
-      "title": "Thường được mọi người mua cùng những sản phẩm sau:"
-    },
-    {
       "type": "product-description",
       "enabled": true
     },
     {
       "type": "product-specifications",
       "enabled": true
+    },
+    {
+      "type": "related-products",
+      "title": "Sản phẩm có liên quan"
+    },
+    {
+      "type": "recommended-products",
+      "title": "Thường được mọi người mua cùng những sản phẩm sau:"
     }
   ]
 }
