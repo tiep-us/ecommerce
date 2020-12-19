@@ -1,4 +1,6 @@
 // storefront.webpack.js
+// dev Pham.xuan.tiep
+// tiep@
 
 const path = require('path')
 
