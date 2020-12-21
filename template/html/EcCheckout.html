@@ -64,7 +64,7 @@
                         @click.prevent="editShippingService = true"
                       >
                         <i class="fas fa-edit mr-1"></i>
-                        {{ i18n('ChangeShippingMethod') }}
+                        Thay đổi phương thức gửi hàng
                       </a>
                     </div>
 
@@ -74,7 +74,7 @@
                       :can-select-services="true"
                       :shipped-items="cart.items"
                       :zip-code="localZipCode"
-                      :can-input-zip="true"
+                      :can-input-zip="false"
                       @select-service="service => $emit('update:shippingService', service)"
                     />
                   </transition-group>
@@ -96,7 +96,7 @@
                     @click="toCheckoutStep = 2"
                   >
                     <i class="fas fa-chevron-right mr-1"></i>
-                    {{ i18n('ProceedToPayment') }}
+                    Chọn phương thức thanh toán
                   </button>
                 </transition>
 
@@ -156,7 +156,7 @@
                     @click="goToOffers"
                   >
                     <i class="fas fa-plus mr-1"></i>
-                    {{ i19selectedOffers }}
+                    Chọn ưu đãi
                   </button>
                 </transition>
               </template>
@@ -174,7 +174,7 @@
 
             <div class="checkout__notes mt-4 mb-auto">
               <div class="form-group">
-                <label for="order-notes">{{ i19additionalComments }}</label>
+                <label for="order-notes">Điền yêu cầu thêm cho shop</label>
                 <textarea
                   class="form-control"
                   :placeholder="i19orderNotesInputMsg"
@@ -189,7 +189,7 @@
             <div class="checkout__back">
               <a :href="cartUrl" class="btn btn-sm btn-light">
                 <i class="fas fa-chevron-left mr-1"></i>
-                {{ i18n('BackToCart') }}
+                Quay lại giỏ hàng
               </a>
             </div>
           </div>
@@ -207,9 +207,9 @@
       >
         <template #title>
           <h3>
-            {{ i19buyAlsoMsg }}
+            Mua thêm cùng
             <small class="d-block text-muted">
-              {{ i19selectedOffers }}
+              Chọn ưu đãi
             </small>
           </h3>
         </template>
@@ -220,7 +220,7 @@
         @click="goToTop"
       >
         <i class="fas fa-chevron-up mr-1"></i>
-        {{ i19checkout }}
+        Thanh toán
       </button>
     </div>
 
@@ -237,7 +237,7 @@
     <div key="account" class="checkout__account" v-else>
       <slot name="account">
         <p class="lead">
-          {{ i18n('RegisterToBuy') }}:
+          Đăng ký tài khoản để mua hàng:
         </p>
 
         <account-form

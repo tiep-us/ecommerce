@@ -156,7 +156,7 @@
                       @click="goToOffers"
                     >
                       <i class="fas fa-plus mr-1"></i>
-                      {{ i19selectedOffers }}
+                      Chọn ưu đãi
                     </button>
                   </transition>
                 </template>
@@ -189,7 +189,7 @@
               <div class="checkout__back">
                 <a :href="cartUrl" class="btn btn-sm btn-light">
                   <i class="fas fa-chevron-left mr-1"></i>
-                  {{ i18n('BackToCart') }}
+                  Quay lại giỏ hàng
                 </a>
               </div>
             </div>
@@ -207,9 +207,9 @@
         >
           <template #title>
             <h3>
-              {{ i19buyAlsoMsg }}
+              Mua thêm cùng
               <small class="d-block text-muted">
-                {{ i19selectedOffers }}
+                Chọn ưu đãi
               </small>
             </h3>
           </template>
@@ -220,7 +220,7 @@
           @click="goToTop"
         >
           <i class="fas fa-chevron-up mr-1"></i>
-          {{ i19checkout }}
+          Thanh toán
         </button>
       </div>
   
@@ -237,7 +237,7 @@
       <div key="account" class="checkout__account" v-else>
         <slot name="account">
           <p class="lead">
-            {{ i18n('RegisterToBuy') }}:
+            Đăng ký tài khoản để mua hàng:
           </p>
   
           <account-form
