@@ -40,6 +40,7 @@
     "mastercard": true,
     "paypal": false,
     "citibank": false,
+    "diners": true,
     "mais": true,
     "itau": false
   },
