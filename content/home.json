@@ -69,7 +69,8 @@
       "page": 2,
       "collection_id": "5fd4d61169274c73fce82887:categories:Áo Khoác/Outerwear nam:/aokhoac",
       "title": "Dành cho nam giới",
-      "headless": true
+      "headless": true,
+      "link": "Dành cho nam giới"
     },
     {
       "type": "banners-grid",
