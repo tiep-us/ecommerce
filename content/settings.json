@@ -1,5 +1,5 @@
 {
-  "domain": "cytimy.com",
+  "domain": "tiep.us",
   "currency_symbol": "₫",
   "primary_color": "#000",
   "theme": {
@@ -8,8 +8,8 @@
   },
   "bg_color": "#fff",
   "logo": "/img/uploads/logo_cytimy.png",
-  "name": "Hệ thống thời trang cao cấp",
-  "short_name": "Shop quần áo thời trang nam và nữ, và cho bé",
+  "name": "tiep.us",
+  "short_name": "Danh sách bất động sản, căn hộ đang bán tại Việt Nam",
   "lang": "en_us",
   "currency": "VND",
   "mini_logo": "",
@@ -17,7 +17,7 @@
   "country_code": "BR",
   "secondary_color": "#000",
   "icon": "/img/uploads/logo_cytimy.png",
-  "store_id": 1199,
-  "description": "Hàng Việt Nam Xuất Khẩu chất lượng cao, giá cả tốt, phù hợp cho mọi gia đình.",
+  "store_id": 1210,
+  "description": "Danh sách bất động sản, căn hộ đang bán tại Việt Nam.",
   "large_icon": "/img/uploads/logo_cytimy.png"
 }
